@@ -1,6 +1,6 @@
 Architektura výpočetních systému (AVS 2019)
 Projekt č. 1 (ANN)
-Login: xlogin00
+Login: xkrajn02
 
 U každého kroku proveďte měření vypočtu pro dataset dostupný na https://www.fit.vutbr.cz/~ibordovsky/avs/datasets/bigDataset.h5
 Správnost výpočtu můžete porovnat pomocí python 3 skriptu "Scripts/compareOutputs.py" s referenčním řešením.
@@ -64,7 +64,7 @@ Proč mají dovětky negativní efekt na výkon?
 
 Krok 3.1: přesun #pragma omp simd
 ===================================
-Celkový čas [s]:
+Celkový čas [s]: 12.2368
 Výkon skalárních operací [MFLOPS]:      ??
 Výkon vektorových operací [MFLOPS]:     ??
 L1 miss [%]:                            ??

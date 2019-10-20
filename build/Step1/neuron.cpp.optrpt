@@ -1,0 +1,71 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.7.259 Build 20180403
+
+Compiler options: -qopenmp -O3 -DNDEBUG -march=native -qopt-report-phase=loop,vec -qopt-report=5 -qopt-report-file:/home/training/dd-19-32-75/Assignment1/build/Step1/neuron.cpp.optrpt -std=gnu++11 -o CMakeFiles/neuron_1.dir/neuron.cpp.o -c
+
+Begin optimization report for: evalNeuron..xN4uuuuvl(size_t, size_t, const float *, const float *, float, size_t)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1) 
+remark #15328: vectorization support: irregularly indexed load was emulated for the variable <weight[i*neuronCount+neuronId]>, 64-bit indexed, part of index is linear but may overflow   [ /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(24,23) ]
+remark #15305: vectorization support: vector length 4
+remark #15462: unmasked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(23,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xM4uuuuvl(size_t, size_t, const float *, const float *, float, size_t)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, masked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1) 
+remark #15328: vectorization support: irregularly indexed load was emulated for the variable <weight[i*neuronCount+neuronId]>, masked, 64-bit indexed, part of index is linear but may overflow   [ /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(24,23) ]
+remark #15305: vectorization support: vector length 4
+remark #15458: masked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(23,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron(size_t, size_t, const float *, const float *, float, size_t)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(23,3)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=7
+LOOP END
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(23,3)
+   remark #15388: vectorization support: reference input[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(24,12) ]
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight[i*neuronCount+neuronId]>, stride is unknown to compiler   [ /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(24,23) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.707
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 11 
+   remark #15477: vector cost: 5.750 
+   remark #15478: estimated potential speedup: 1.780 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(23,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference input[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/neuron.cpp(24,12) ]
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.413
+LOOP END
+===========================================================================

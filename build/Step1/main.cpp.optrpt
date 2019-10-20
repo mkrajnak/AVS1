@@ -1,0 +1,175 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.7.259 Build 20180403
+
+Compiler options: -qopenmp -O3 -DNDEBUG -march=native -qopt-report-phase=loop,vec -qopt-report=5 -qopt-report-file:/home/training/dd-19-32-75/Assignment1/build/Step1/main.cpp.optrpt -std=gnu++11 -o CMakeFiles/main_1.dir/main.cpp.o -c
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(161,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,17) inlined into /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(164,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,67) ]
+      remark #15389: vectorization support: reference output has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,5) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.104
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 112 
+      remark #15477: vector cost: 30.120 
+      remark #15478: estimated potential speedup: 3.710 
+      remark #15484: vector function calls: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #15489: --- begin vector function matching report ---
+      remark #15490: Function call: evalNeuron(size_t, size_t, const float *, const float *, float, size_t) with simdlen=8, actual parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,17) ]
+      remark #15492: A suitable vector variant was found (out of 2) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)
+      remark #15493: --- end vector function matching report ---
+      remark #25015: Estimate of max trip count of loop=64
+   LOOP END
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,17) inlined into /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(166,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,67) ]
+      remark #15389: vectorization support: reference output has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,5) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.104
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 112 
+      remark #15477: vector cost: 30.120 
+      remark #15478: estimated potential speedup: 3.710 
+      remark #15484: vector function calls: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #15489: --- begin vector function matching report ---
+      remark #15490: Function call: evalNeuron(size_t, size_t, const float *, const float *, float, size_t) with simdlen=8, actual parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,17) ]
+      remark #15492: A suitable vector variant was found (out of 2) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)
+      remark #15493: --- end vector function matching report ---
+      remark #25015: Estimate of max trip count of loop=64
+   LOOP END
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,17) inlined into /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(168,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,67) ]
+      remark #15389: vectorization support: reference output[i] has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,5) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.070
+      remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 112 
+      remark #15477: vector cost: 30.500 
+      remark #15478: estimated potential speedup: 2.300 
+      remark #15484: vector function calls: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #15489: --- begin vector function matching report ---
+      remark #15490: Function call: evalNeuron(size_t, size_t, const float *, const float *, float, size_t) with simdlen=4, actual parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,17) ]
+      remark #15492: A suitable vector variant was found (out of 2) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)
+      remark #15493: --- end vector function matching report ---
+      remark #25015: Estimate of max trip count of loop=1
+   LOOP END
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,17) inlined into /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(168,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(180,5)
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(182,7) ]
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(176,3)
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(178,5) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: evaluateLayer(size_t, size_t, const float *, const float *, const float *, float *)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,3)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,3)
+   remark #15389: vectorization support: reference bias[i] has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,67) ]
+   remark #15388: vectorization support: reference output[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.134
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 112 
+   remark #15477: vector cost: 29.750 
+   remark #15478: estimated potential speedup: 3.610 
+   remark #15484: vector function calls: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #15489: --- begin vector function matching report ---
+   remark #15490: Function call: evalNeuron(size_t, size_t, const float *, const float *, float, size_t) with simdlen=4, actual parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(277,17) ]
+   remark #15492: A suitable vector variant was found (out of 2) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)
+   remark #15493: --- end vector function matching report ---
+LOOP END
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(274,3)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: transpose2D(float *&, size_t, size_t)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(298,3)
+   remark #25101: Loop Interchange not done due to: Original Order seems proper
+   remark #25452: Original Order found to be proper, but by a close margin
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(300,5)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(300,5)
+      remark #15388: vectorization support: reference data has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(302,7) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp[y*dimX+x]>, stride is unknown to compiler   [ /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(302,28) ]
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.238
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 7 
+      remark #15477: vector cost: 5.250 
+      remark #15478: estimated potential speedup: 1.300 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step1/main.cpp(300,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

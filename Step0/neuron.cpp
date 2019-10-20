@@ -1,7 +1,7 @@
 /*
  * Architektury výpočetních systémů (AVS 2019)
  * Projekt c. 1 (ANN)
- * Login: xlogin00
+ * Login: xlogin02
  */
 
 #include <cstdlib>
@@ -18,5 +18,9 @@ float evalNeuron(
 {
   //TODO: Step0 - Fill in the implementation, all the required arguments are passed.
   //              If you don't use them all you are doing something wrong!
-  return 0.0f;
+  float sum = bias;
+  for (size_t i = 0; i < inputSize; i++){
+    sum += input[i] * weights[i*neuronCount+neuronId];
+  }
+  return sum < 0 ? 0 : sum;
 }

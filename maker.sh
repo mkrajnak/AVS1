@@ -1,0 +1,1 @@
+cmake .. -DCMAKE_BUILD_TYPE=Release -DWITH_PAPI=0 -DSTEPS='$1'

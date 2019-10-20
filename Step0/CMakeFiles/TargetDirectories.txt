@@ -1,0 +1,7 @@
+/home/training/dd-19-32-75/Assignment1/Step0/CMakeFiles/rebuild_cache.dir
+/home/training/dd-19-32-75/Assignment1/Step0/CMakeFiles/edit_cache.dir
+/home/training/dd-19-32-75/Assignment1/Step0/Step0/CMakeFiles/rebuild_cache.dir
+/home/training/dd-19-32-75/Assignment1/Step0/Step0/CMakeFiles/ANN_0.dir
+/home/training/dd-19-32-75/Assignment1/Step0/Step0/CMakeFiles/main_0.dir
+/home/training/dd-19-32-75/Assignment1/Step0/Step0/CMakeFiles/edit_cache.dir
+/home/training/dd-19-32-75/Assignment1/Step0/Step0/CMakeFiles/neuron_0.dir

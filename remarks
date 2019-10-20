@@ -1,0 +1,1 @@
+remark #15545: SIMD annotation was not seen, consider adding 'declare simd' directives at function declaration  -> #pragma omp declare simd
