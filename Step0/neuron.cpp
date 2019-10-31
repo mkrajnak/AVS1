@@ -1,7 +1,7 @@
 /*
  * Architektury výpočetních systémů (AVS 2019)
  * Projekt c. 1 (ANN)
- * Login: xlogin02
+ * Login: xkrajn02
  */
 
 #include <cstdlib>

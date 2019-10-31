@@ -11,21 +11,21 @@ Begin optimization report for: main(int, char **)
     Report from: Loop nest & Vector optimizations [loop, vec]
 
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(302,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
    remark #25101: Loop Interchange not done due to: Original Order seems proper
    remark #25452: Original Order found to be proper, but by a close margin
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
    <Peeled loop for vectorization, Multiversioned v1>
       remark #25015: Estimate of max trip count of loop=7
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
    <Multiversioned v1>
       remark #25228: Loop multiversioned for Data Dependence
-      remark #15388: vectorization support: reference weight1[x*784+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,7) ]
-      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight1[y*512+x]>, stride is 512   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,28) ]
+      remark #15388: vectorization support: reference weight1[x*784+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,7) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight1[y*512+x]>, stride is 512   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,28) ]
       remark #15305: vectorization support: vector length 8
       remark #15309: vectorization support: normalized vectorization overhead 0.556
       remark #15300: LOOP WAS VECTORIZED
@@ -40,32 +40,32 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlin
       remark #25015: Estimate of max trip count of loop=98
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
    <Remainder loop for vectorization, Multiversioned v1>
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(161,3)
    <Multiversioned v2>
       remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
       remark #25438: unrolled without remainder by 2  
    LOOP END
 LOOP END
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(302,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
    remark #25101: Loop Interchange not done due to: Original Order seems proper
    remark #25452: Original Order found to be proper, but by a close margin
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
    <Peeled loop for vectorization, Multiversioned v1>
       remark #25015: Estimate of max trip count of loop=7
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
    <Multiversioned v1>
       remark #25228: Loop multiversioned for Data Dependence
-      remark #15388: vectorization support: reference weight2[x*512+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,7) ]
-      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight2[y*512+x]>, stride is 512   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,28) ]
+      remark #15388: vectorization support: reference weight2[x*512+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,7) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight2[y*512+x]>, stride is 512   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,28) ]
       remark #15305: vectorization support: vector length 8
       remark #15309: vectorization support: normalized vectorization overhead 0.556
       remark #15300: LOOP WAS VECTORIZED
@@ -80,30 +80,30 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlin
       remark #25015: Estimate of max trip count of loop=64
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
    <Remainder loop for vectorization, Multiversioned v1>
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(162,3)
    <Multiversioned v2>
       remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
       remark #25438: unrolled without remainder by 2  
    LOOP END
 LOOP END
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(302,3) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
    <Peeled loop for vectorization, Multiversioned v1>
       remark #25015: Estimate of max trip count of loop=7
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
    <Multiversioned v1>
       remark #25228: Loop multiversioned for Data Dependence
-      remark #15388: vectorization support: reference weight3[x*512+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,7) ]
-      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight3[y*10+x]>, stride is 10   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,28) ]
+      remark #15388: vectorization support: reference weight3[x*512+y] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,7) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <weight3[y*10+x]>, stride is 10   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,28) ]
       remark #15305: vectorization support: vector length 8
       remark #15309: vectorization support: normalized vectorization overhead 0.556
       remark #15300: LOOP WAS VECTORIZED
@@ -118,11 +118,11 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3) inlin
       remark #25015: Estimate of max trip count of loop=64
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
    <Remainder loop for vectorization, Multiversioned v1>
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(163,3)
    <Multiversioned v2>
       remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
       remark #25438: unrolled without remainder by 2  
@@ -132,104 +132,76 @@ LOOP END
 LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(165,3)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(168,5)
-   <Peeled loop for vectorization>
-      remark #25015: Estimate of max trip count of loop=7
-   LOOP END
-
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(168,5)
-      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,68) ]
-      remark #15388: vectorization support: reference output has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,5) ]
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(168,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,68) ]
+      remark #15389: vectorization support: reference output has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,5) ]
       remark #15381: vectorization support: unaligned access used inside loop body
-      remark #15397: Suitable vector variant of function 'evalNeuron(size_t, const float *, const float *, float)' was not found   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
       remark #15305: vectorization support: vector length 8
       remark #15399: vectorization support: unroll factor set to 2
-      remark #15309: vectorization support: normalized vectorization overhead 0.012
+      remark #15309: vectorization support: normalized vectorization overhead 0.039
       remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
-      remark #15442: entire loop may be executed in remainder
-      remark #15449: unmasked aligned unit stride stores: 1 
       remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
       remark #15475: --- begin vector cost summary ---
       remark #15476: scalar cost: 112 
-      remark #15477: vector cost: 125.620 
-      remark #15478: estimated potential speedup: 0.890 
-      remark #15485: serialized function calls: 1
+      remark #15477: vector cost: 29.120 
+      remark #15478: estimated potential speedup: 3.840 
+      remark #15484: vector function calls: 1 
       remark #15488: --- end vector cost summary ---
       remark #15489: --- begin vector function matching report ---
-      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=8, actual parameter types: (uniform,uniform,linear:3136,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
-      remark #15544: Suitable vector variant functions were not found (out of 2) 
+      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=8, actual parameter types: (uniform,uniform,linear:3136,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,17) ]
+      remark #15492: A suitable vector variant was found (out of 8) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,vector,vector,vector)
       remark #15493: --- end vector function matching report ---
       remark #25015: Estimate of max trip count of loop=32
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(168,5)
-   <Remainder loop for vectorization>
-   LOOP END
-
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(170,5)
-   <Peeled loop for vectorization>
-      remark #25015: Estimate of max trip count of loop=7
-   LOOP END
-
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(170,5)
-      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,68) ]
-      remark #15388: vectorization support: reference output has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,5) ]
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(170,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,68) ]
+      remark #15389: vectorization support: reference output has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,5) ]
       remark #15381: vectorization support: unaligned access used inside loop body
-      remark #15397: Suitable vector variant of function 'evalNeuron(size_t, const float *, const float *, float)' was not found   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
       remark #15305: vectorization support: vector length 8
       remark #15399: vectorization support: unroll factor set to 2
-      remark #15309: vectorization support: normalized vectorization overhead 0.013
+      remark #15309: vectorization support: normalized vectorization overhead 0.039
       remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
-      remark #15442: entire loop may be executed in remainder
-      remark #15449: unmasked aligned unit stride stores: 1 
       remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
       remark #15475: --- begin vector cost summary ---
       remark #15476: scalar cost: 111 
-      remark #15477: vector cost: 124.870 
-      remark #15478: estimated potential speedup: 0.890 
-      remark #15485: serialized function calls: 1
+      remark #15477: vector cost: 29.120 
+      remark #15478: estimated potential speedup: 3.800 
+      remark #15484: vector function calls: 1 
       remark #15488: --- end vector cost summary ---
       remark #15489: --- begin vector function matching report ---
-      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=8, actual parameter types: (uniform,uniform,linear:2048,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
-      remark #15544: Suitable vector variant functions were not found (out of 2) 
+      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=8, actual parameter types: (uniform,uniform,linear:2048,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,17) ]
+      remark #15492: A suitable vector variant was found (out of 8) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,vector,vector,vector)
       remark #15493: --- end vector function matching report ---
       remark #25015: Estimate of max trip count of loop=32
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(170,5)
-   <Remainder loop for vectorization>
-   LOOP END
-
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(172,5)
-   <Peeled loop for vectorization>
-      remark #25015: Estimate of max trip count of loop=3
-   LOOP END
-
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(172,5)
-      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,68) ]
-      remark #15388: vectorization support: reference output[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,5) ]
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(172,5)
+      remark #15389: vectorization support: reference bias has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,68) ]
+      remark #15389: vectorization support: reference output[i] has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,5) ]
       remark #15381: vectorization support: unaligned access used inside loop body
-      remark #15397: Suitable vector variant of function 'evalNeuron(size_t, const float *, const float *, float)' was not found   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
       remark #15305: vectorization support: vector length 4
-      remark #15309: vectorization support: normalized vectorization overhead 0.040
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.055
       remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
-      remark #15442: entire loop may be executed in remainder
-      remark #15449: unmasked aligned unit stride stores: 1 
       remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
       remark #15475: --- begin vector cost summary ---
       remark #15476: scalar cost: 111 
-      remark #15477: vector cost: 125.750 
-      remark #15478: estimated potential speedup: 0.930 
-      remark #15485: serialized function calls: 1
+      remark #15477: vector cost: 29.500 
+      remark #15478: estimated potential speedup: 2.350 
+      remark #15484: vector function calls: 1 
       remark #15488: --- end vector cost summary ---
       remark #15489: --- begin vector function matching report ---
-      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=4, actual parameter types: (uniform,uniform,linear:2048,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
-      remark #15544: Suitable vector variant functions were not found (out of 2) 
+      remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=4, actual parameter types: (uniform,uniform,linear:2048,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,17) ]
+      remark #15492: A suitable vector variant was found (out of 8) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,vector,vector,vector)
       remark #15493: --- end vector function matching report ---
-      remark #25015: Estimate of max trip count of loop=2
+      remark #25015: Estimate of max trip count of loop=1
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(172,5)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,17) inlined into /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(172,5)
    <Remainder loop for vectorization>
    LOOP END
 LOOP END
@@ -252,14 +224,14 @@ Begin optimization report for: evaluateLayer(size_t, size_t, const float *, floa
     Report from: Loop nest & Vector optimizations [loop, vec]
 
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,3)
 <Peeled loop for vectorization>
    remark #25015: Estimate of max trip count of loop=3
 LOOP END
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,3)
-   remark #15389: vectorization support: reference bias[i] has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,68) ]
-   remark #15388: vectorization support: reference output[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,5) ]
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,3)
+   remark #15389: vectorization support: reference bias[i] has unaligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,68) ]
+   remark #15388: vectorization support: reference output[i] has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,5) ]
    remark #15381: vectorization support: unaligned access used inside loop body
    remark #15305: vectorization support: vector length 4
    remark #15399: vectorization support: unroll factor set to 2
@@ -275,12 +247,12 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,3)
    remark #15484: vector function calls: 1 
    remark #15488: --- end vector cost summary ---
    remark #15489: --- begin vector function matching report ---
-   remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=4, actual parameter types: (uniform,uniform,linear:var,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(282,17) ]
-   remark #15492: A suitable vector variant was found (out of 2) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,linear:4,vector)
+   remark #15490: Function call: evalNeuron(size_t, const float *, const float *, float) with simdlen=4, actual parameter types: (uniform,uniform,linear:var,vector)   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(281,17) ]
+   remark #15492: A suitable vector variant was found (out of 8) with xmm, simdlen=4, unmasked, formal parameter types: (uniform,uniform,linear:4,vector)
    remark #15493: --- end vector function matching report ---
 LOOP END
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(279,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(278,3)
 <Remainder loop for vectorization>
 LOOP END
 ===========================================================================
@@ -290,19 +262,19 @@ Begin optimization report for: transpose2D(float *&, size_t, size_t)
     Report from: Loop nest & Vector optimizations [loop, vec]
 
 
-LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3)
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(302,3)
    remark #25101: Loop Interchange not done due to: Original Order seems proper
    remark #25452: Original Order found to be proper, but by a close margin
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5)
    <Peeled loop for vectorization>
       remark #25015: Estimate of max trip count of loop=7
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5)
-      remark #15388: vectorization support: reference data has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,7) ]
-      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp[y*dimX+x]>, stride is unknown to compiler   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(307,28) ]
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5)
+      remark #15388: vectorization support: reference data has aligned access   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,7) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <tmp[y*dimX+x]>, stride is unknown to compiler   [ /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(306,28) ]
       remark #15305: vectorization support: vector length 8
       remark #15309: vectorization support: normalized vectorization overhead 0.238
       remark #15300: LOOP WAS VECTORIZED
@@ -316,7 +288,7 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(303,3)
       remark #15488: --- end vector cost summary ---
    LOOP END
 
-   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(305,5)
+   LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/main.cpp(304,5)
    <Remainder loop for vectorization>
    LOOP END
 LOOP END

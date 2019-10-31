@@ -305,4 +305,3 @@ void transpose2D(float*& data, const size_t dimX, const size_t dimY)
   // release the original matrix
   free(tmp);
 }
-

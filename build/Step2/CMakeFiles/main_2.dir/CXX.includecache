@@ -6,15 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/training/dd-19-32-75/Assignment1/Step2/main.cpp
-iostream
--
-hdf5.h
--
-neuron.h
-/home/training/dd-19-32-75/Assignment1/Step2/neuron.h
-papi_cntr.h
-/home/training/dd-19-32-75/Assignment1/Step2/papi_cntr.h
-
-/home/training/dd-19-32-75/Assignment1/Step2/neuron.h
-

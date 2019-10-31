@@ -1,7 +1,7 @@
 /*
  * Architektury výpočetních systémů (AVS 2019)
  * Projekt c. 1 (ANN)
- * Login: xlogin00
+ * Login: xkrajn02
  */
 
 /**
@@ -18,7 +18,8 @@
 // linear: Hodnota proměnné je ve vztahu k číslu iterace
 // uniform: Hodnota proměnné je konstantní ve všech iteracích
 // actual parameter types: (uniform,uniform,uniform,uniform,vector,linear:1)
-#pragma omp declare simd uniform(inputSize) uniform(neuronCount) uniform(weight) uniform(input) linear(neuronId:1) 
+#pragma omp declare simd uniform(inputSize) uniform(neuronCount) uniform(input) uniform(weight) linear(neuronId:1)
+// #pragma omp declare simd uniform(input) uniform(weight)
 float evalNeuron(
   size_t inputSize,
   size_t neuronCount,

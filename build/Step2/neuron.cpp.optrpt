@@ -36,6 +36,92 @@ LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
 LOOP END
 ===========================================================================
 
+Begin optimization report for: evalNeuron..xN4uvuv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, unmasked, formal parameter types: (uniform,vector,uniform,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15305: vectorization support: vector length 4
+remark #15462: unmasked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xM4uvuv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, masked, formal parameter types: (uniform,vector,uniform,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, masked, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15305: vectorization support: vector length 4
+remark #15458: masked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xN4uvvv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, unmasked, formal parameter types: (uniform,vector,vector,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15328: vectorization support: indirect load was emulated for the variable <weight[i]>, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,23) ]
+remark #15305: vectorization support: vector length 4
+remark #15462: unmasked indexed (or gather) loads: 2 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xM4uvvv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, masked, formal parameter types: (uniform,vector,vector,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, masked, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15328: vectorization support: indirect load was emulated for the variable <weight[i]>, masked, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,23) ]
+remark #15305: vectorization support: vector length 4
+remark #15458: masked indexed (or gather) loads: 2 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xN4vvuv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, unmasked, formal parameter types: (vector,vector,uniform,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, masked, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15305: vectorization support: vector length 4
+remark #15458: masked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
+Begin optimization report for: evalNeuron..xM4vvuv(size_t, const float *, const float *, float)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+remark #15347: FUNCTION WAS VECTORIZED with xmm, simdlen=4, masked, formal parameter types: (vector,vector,uniform,vector) 
+remark #15328: vectorization support: indirect load was emulated for the variable <input[i]>, masked, 64-bit indexed, part of address is private   [ /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(22,12) ]
+remark #15305: vectorization support: vector length 4
+remark #15458: masked indexed (or gather) loads: 1 
+
+LOOP BEGIN at /home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp(21,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+===========================================================================
+
 Begin optimization report for: evalNeuron(size_t, const float *, const float *, float)
 
     Report from: Loop nest & Vector optimizations [loop, vec]

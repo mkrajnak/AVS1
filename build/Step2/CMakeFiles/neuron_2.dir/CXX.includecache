@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/training/dd-19-32-75/Assignment1/Step2/neuron.cpp
-cstdlib
--
-neuron.h
-/home/training/dd-19-32-75/Assignment1/Step2/neuron.h
-stdio.h
--
-
-/home/training/dd-19-32-75/Assignment1/Step2/neuron.h
-

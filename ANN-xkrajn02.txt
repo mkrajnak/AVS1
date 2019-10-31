@@ -1,0 +1,105 @@
+Architektura výpočetních systému (AVS 2019)
+Projekt č. 1 (ANN)
+Login: xkrajn02
+
+U každého kroku proveďte měření vypočtu pro dataset dostupný na https://www.fit.vutbr.cz/~ibordovsky/avs/datasets/bigDataset.h5
+Správnost výpočtu můžete porovnat pomocí python 3 skriptu "Scripts/compareOutputs.py" s referenčním řešením.
+Pro bigDataset je dostupný na https://www.fit.vutbr.cz/~ibordovsky/avs/datasets/bigRefOutput.h5
+
+Krok 0: základní implementace
+=============================
+Celkový čas [s]: 194.728 s
+Výkon skalárních operací [MFLOPS]:      68.626
+Výkon vektorových operací [MFLOPS]:     1140.84
+L1 miss [%]:                            84.4322509
+L2 miss [%]:                            99.9478358
+L3 miss [%]:                            0.0072776
+
+Které PAPI_EVENTS jste použili pro získání počtu výpadků v paměti?
+HW countery pro L1:PAPI_L1_DCM|PAPI_LD_INS|PAPI_SR_INS
+HW countery pro L2:PAPI_L2_TCM|PAPI_L2_TCA
+HW countery pro L3:PAPI_L3_TCM|PAPI_L3_TCA
+
+
+Krok 1: vektorizace funkcí
+===================================
+Celkový čas [s]:115.377
+Výkon skalárních operací [MFLOPS]:      0.00587671
+Výkon vektorových operací [MFLOPS]:     1856.08
+L1 miss [%]:                            38.15
+L2 miss [%]:                            99.80
+L3 miss [%]:                            0.015
+
+Jaké pragmy bylo potřeba přidat?
+#pragma omp simd
+Které dovětky k pragmám jste použili a jaky měly vliv na kompilátorem generované funkce? (main.cpp.optrpt/neuron.cpp.optrpt)
+#pragma omp declare simd uniform(inputSize) uniform(neuronCount) uniform(weight) uniform(input) linear(neuronId:1)
+
+Po pridani dovetku z main.cpp.optrpt zmizlo:
+remark #15333: simd loop was not vectorized: exception handling for a call prevents vectorization
+
+Klesne cena smycky:
+z "remark #15477: vector cost: 132.370" na "remark #15477: vector cost: 30.120"
+Bez dovetku nebola smycka vektorizovana.
+
+Krok 2: přístupy do paměti
+=============================
+a) S dovětky
+(Sepište všechyn použité dovětky):
+
+Celkový čas [s]: 104.29 s
+Výkon skalárních operací [MFLOPS]:      0.0065876
+Výkon vektorových operací [MFLOPS]:     2054.14
+L1 miss [%]:
+L2 miss [%]:                            14.8
+L3 miss [%]:                            0.04
+
+b) Bez dovětků
+Některé dovětky maji negativní dopad na výkon, přestože kompilátor tvrdí opak. Které?
+Celkový čas [s]:
+Výkon skalárních operací [MFLOPS]:      ??
+Výkon vektorových operací [MFLOPS]:     ??
+L1 miss [%]:                            ??
+L2 miss [%]:                            ??
+L3 miss [%]:                            ??
+
+Proč mají dovětky negativní efekt na výkon?
+(neklasifikovana odpověď, můžete vynechat, ale může vynést přiklonění k bodu u věcí které jsou na hraně :-) )
+-
+
+
+Krok 3.1: přesun #pragma omp simd
+===================================
+Celkový čas [s]: 12.2368
+Výkon skalárních operací [MFLOPS]:      ??
+Výkon vektorových operací [MFLOPS]:     ??
+L1 miss [%]:                            ??
+L2 miss [%]:                            ??
+L3 miss [%]:                            ??
+
+Jaký dovětek je potřeba přidat?
+-
+
+Krok 3.2: vykonání po vrstvách místo po obrázcích
+===================================
+Celkový čas [s]:
+Výkon skalárních operací [MFLOPS]:      ??
+Výkon vektorových operací [MFLOPS]:     ??
+L1 miss [%]:                            ??
+L2 miss [%]:                            ??
+L3 miss [%]:                            ??
+
+Popište, jaký dopad na výkon mají výpadky v cache.
+-
+
+Krok 4: režie funkcí, zarovnání paměti
+===================================
+Celkový čas [s]:
+Výkon skalárních operací [MFLOPS]:      ??
+Výkon vektorových operací [MFLOPS]:     ??
+L1 miss [%]:                            ??
+L2 miss [%]:                            ??
+L3 miss [%]:                            ??
+
+Proč není zrychlení již výrazné? Na jaké typy problémů cílí tyto optimalizace?
+-

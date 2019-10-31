@@ -111,84 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ANN_0
-
-# Build rule for target.
-ANN_0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ANN_0
-.PHONY : ANN_0
-
-# fast build rule for target.
-ANN_0/fast:
-	$(MAKE) -f Step0/CMakeFiles/ANN_0.dir/build.make Step0/CMakeFiles/ANN_0.dir/build
-.PHONY : ANN_0/fast
-
-#=============================================================================
-# Target rules for targets named main_0
-
-# Build rule for target.
-main_0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main_0
-.PHONY : main_0
-
-# fast build rule for target.
-main_0/fast:
-	$(MAKE) -f Step0/CMakeFiles/main_0.dir/build.make Step0/CMakeFiles/main_0.dir/build
-.PHONY : main_0/fast
-
-#=============================================================================
-# Target rules for targets named neuron_0
-
-# Build rule for target.
-neuron_0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 neuron_0
-.PHONY : neuron_0
-
-# fast build rule for target.
-neuron_0/fast:
-	$(MAKE) -f Step0/CMakeFiles/neuron_0.dir/build.make Step0/CMakeFiles/neuron_0.dir/build
-.PHONY : neuron_0/fast
-
-#=============================================================================
-# Target rules for targets named ANN_1
-
-# Build rule for target.
-ANN_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ANN_1
-.PHONY : ANN_1
-
-# fast build rule for target.
-ANN_1/fast:
-	$(MAKE) -f Step1/CMakeFiles/ANN_1.dir/build.make Step1/CMakeFiles/ANN_1.dir/build
-.PHONY : ANN_1/fast
-
-#=============================================================================
-# Target rules for targets named main_1
-
-# Build rule for target.
-main_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main_1
-.PHONY : main_1
-
-# fast build rule for target.
-main_1/fast:
-	$(MAKE) -f Step1/CMakeFiles/main_1.dir/build.make Step1/CMakeFiles/main_1.dir/build
-.PHONY : main_1/fast
-
-#=============================================================================
-# Target rules for targets named neuron_1
-
-# Build rule for target.
-neuron_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 neuron_1
-.PHONY : neuron_1
-
-# fast build rule for target.
-neuron_1/fast:
-	$(MAKE) -f Step1/CMakeFiles/neuron_1.dir/build.make Step1/CMakeFiles/neuron_1.dir/build
-.PHONY : neuron_1/fast
-
-#=============================================================================
 # Target rules for targets named ANN_2
 
 # Build rule for target.
@@ -235,12 +157,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ANN_0"
-	@echo "... main_0"
-	@echo "... neuron_0"
-	@echo "... ANN_1"
-	@echo "... main_1"
-	@echo "... neuron_1"
 	@echo "... ANN_2"
 	@echo "... main_2"
 	@echo "... neuron_2"

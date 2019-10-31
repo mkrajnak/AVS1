@@ -157,7 +157,7 @@ int main(int argc, char* argv[])
   #ifdef WITH_PAPI
   papi_routines["network"].Start();
   #endif
-  // Step2 
+  // Step2
   transpose2D(weight1, layerSize, imagePixels);
   transpose2D(weight2, layerSize, layerSize);
   transpose2D(weight3, outputSize, layerSize);
@@ -274,7 +274,6 @@ void evaluateLayer(
 {
   // For each neuron in the layer calculate its output
   //TODO: Step1 - enforce vectorization of this loop
-
   #pragma omp simd
   for (size_t i = 0; i < neuronCount; i++)
   {
@@ -310,4 +309,3 @@ void transpose2D(float*& data, const size_t dimX, const size_t dimY)
   // release the original matrix
   free(tmp);
 }
-
