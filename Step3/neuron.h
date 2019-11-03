@@ -17,10 +17,12 @@
 
 // linear: Hodnota proměnné je ve vztahu k číslu iterace
 // uniform: Hodnota proměnné je konstantní ve všech iteracích
-#pragma omp declare simd uniform(inputSize)
-// #pragma omp declare simd uniform(inputSize) uniform(weight)
-// #pragma omp declare simd uniform(inputSize) uniform(input) linear(weight:1)
-// #pragma omp declare simd uniform(inputSize) uniform(input) linear(weight:1) linear(bias)
+// #pragma omp declare simd uniform(inputSize) uniform(input) uniform(weight)
+// #pragma omp declare simd  linear(weight) linear(bias)
+// #pragma omp declare simd uniform(inputSize) uniform(input) linear(weight)
+// #pragma omp declare simd 
+// #pragma omp declare simd  uniform(inputSize, input) linear(weight:12544)
+// #pragma omp declare simd uniform(inputSize) linear(weight)
 float evalNeuron(
   size_t inputSize,
   const float* input,

@@ -46,22 +46,27 @@ Krok 2: přístupy do paměti
 =============================
 a) S dovětky
 (Sepište všechyn použité dovětky):
+#pragma omp declare simd  uniform(inputSize, input) linear(weight:3136)
+#pragma omp declare simd  uniform(inputSize, input) linear(weight:2048
+#pragma omp declare simd  uniform(inputSize, input) linear(weight)
 
-Celkový čas [s]: 104.29 s
-Výkon skalárních operací [MFLOPS]:      0.0065876
-Výkon vektorových operací [MFLOPS]:     2054.14
-L1 miss [%]:
-L2 miss [%]:                            14.8
-L3 miss [%]:                            0.04
+Celkový čas [s]: 22.6412 s
+Výkon skalárních operací [MFLOPS]:      295.477
+Výkon vektorových operací [MFLOPS]:     14155.8
+L1 miss [%]:                            14.8350234
+L2 miss [%]:                            48.2
+L3 miss [%]:                            0.0632
 
 b) Bez dovětků
 Některé dovětky maji negativní dopad na výkon, přestože kompilátor tvrdí opak. Které?
-Celkový čas [s]:
-Výkon skalárních operací [MFLOPS]:      ??
-Výkon vektorových operací [MFLOPS]:     ??
-L1 miss [%]:                            ??
-L2 miss [%]:                            ??
-L3 miss [%]:                            ??
+#pragma omp declare simd  uniform(inputSize, input) linear(weight:3136)
+#pragma omp declare simd  uniform(inputSize, input) linear(weight:2048)
+Celkový čas [s]: 266.715 s
+Výkon skalárních operací [MFLOPS]:      0.00251672
+Výkon vektorových operací [MFLOPS]:     803.214
+L1 miss [%]:                            2.1226002
+L2 miss [%]:                            14
+L3 miss [%]:                            0.0517
 
 Proč mají dovětky negativní efekt na výkon?
 (neklasifikovana odpověď, můžete vynechat, ale může vynést přiklonění k bodu u věcí které jsou na hraně :-) )
@@ -70,36 +75,36 @@ Proč mají dovětky negativní efekt na výkon?
 
 Krok 3.1: přesun #pragma omp simd
 ===================================
-Celkový čas [s]: 12.2368
-Výkon skalárních operací [MFLOPS]:      ??
-Výkon vektorových operací [MFLOPS]:     ??
-L1 miss [%]:                            ??
-L2 miss [%]:                            ??
-L3 miss [%]:                            ??
+Celkový čas [s]: 22.55 s
+Výkon skalárních operací [MFLOPS]:      296.17
+Výkon vektorových operací [MFLOPS]:     14184.9
+L1 miss [%]:                            14.9102847
+L2 miss [%]:                            48.3%
+L3 miss [%]:                            0.0685%
 
 Jaký dovětek je potřeba přidat?
--
+reduction(+:sum)
 
 Krok 3.2: vykonání po vrstvách místo po obrázcích
 ===================================
-Celkový čas [s]:
-Výkon skalárních operací [MFLOPS]:      ??
-Výkon vektorových operací [MFLOPS]:     ??
-L1 miss [%]:                            ??
-L2 miss [%]:                            ??
-L3 miss [%]:                            ??
+Celkový čas [s]: 21.5329
+Výkon skalárních operací [MFLOPS]:      173.307
+Výkon vektorových operací [MFLOPS]:     15323
+L1 miss [%]:                            15.4194929
+L2 miss [%]:                            55.4%
+L3 miss [%]:                            0.187%
 
 Popište, jaký dopad na výkon mají výpadky v cache.
 -
 
 Krok 4: režie funkcí, zarovnání paměti
 ===================================
-Celkový čas [s]:
-Výkon skalárních operací [MFLOPS]:      ??
-Výkon vektorových operací [MFLOPS]:     ??
-L1 miss [%]:                            ??
-L2 miss [%]:                            ??
-L3 miss [%]:                            ??
+Celkový čas [s]: 20.3012 s
+Výkon skalárních operací [MFLOPS]:      16.2998
+Výkon vektorových operací [MFLOPS]:     16612.7
+L1 miss [%]:                            16.4743537
+L2 miss [%]:                            58.3
+L3 miss [%]:                            0.155
 
 Proč není zrychlení již výrazné? Na jaké typy problémů cílí tyto optimalizace?
 -

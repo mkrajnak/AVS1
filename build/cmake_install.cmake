@@ -39,7 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/training/dd-19-32-75/Assignment1/build/Step0/cmake_install.cmake")
+  include("/home/training/dd-19-32-75/Assignment1/build/Step1/cmake_install.cmake")
   include("/home/training/dd-19-32-75/Assignment1/build/Step2/cmake_install.cmake")
+  include("/home/training/dd-19-32-75/Assignment1/build/Step3/cmake_install.cmake")
+  include("/home/training/dd-19-32-75/Assignment1/build/Step4/cmake_install.cmake")
 
 endif()
 

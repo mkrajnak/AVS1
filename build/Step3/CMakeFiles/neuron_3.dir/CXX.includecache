@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/training/dd-19-32-75/Assignment1/Step3/neuron.cpp
+cstdlib
+-
+neuron.h
+/home/training/dd-19-32-75/Assignment1/Step3/neuron.h
+stdio.h
+-
+
+/home/training/dd-19-32-75/Assignment1/Step3/neuron.h
+
